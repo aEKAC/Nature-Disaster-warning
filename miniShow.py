@@ -9,8 +9,8 @@ import tkinter as tk
 
 file_path = 'configuration.json'
 apiJson = {
-    "id" : 10000907,
-    "key" : '252a60f67d97dfa67b928ced980e9427'
+    "id" : 88888888,    #默认公共用户的api
+    "key" : 88888888
 }
 costant = {
     "region": '*请输入当前的省',
