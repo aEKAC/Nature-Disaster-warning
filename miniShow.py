@@ -6,10 +6,11 @@ import threading
 import os
 import requests
 import tkinter as tk
+import webbrowser as web
 
 file_path = 'configuration.json'
-apiJson = {
-    "id" : 88888888,    #默认公共用户的api
+apiJson = {     #默认公共用户的api，可以自己在https://www.apihz.cn/注册更稳定
+    "id" : 88888888,
     "key" : 88888888
 }
 costant = {
@@ -206,7 +207,7 @@ def windowMoudulePlace():
     #功能按钮
     saveButton = tk.Button(window, text='保存', width=15, height=1, command=saveForm)
     saveButton.pack(side='top')
-    informationButton = tk.Button(window, text='信息', width=15, height=1)
+    informationButton = tk.Button(window, text='信息', width=15, height=1, command=openInformation)
     informationButton.pack(side='left')
     exitButton = tk.Button(window, text='退出', width=15, height=1, command=closeSetting)
     exitButton.pack(side='right')
@@ -235,7 +236,9 @@ def windowMoudulePlace():
     informationButton.pack(side='left')
     exitButton = tk.Button(window, text='退出', width=15, height=1, command=closeSetting)
     exitButton.pack(side='right')
-    '''
+'''
+def openInformation():
+    web.open('https://github.com/Ordinary-awa/Nature-Disaster-warning/tree/main')
 def iconReady(name):
     match name:
         case 'icon':
